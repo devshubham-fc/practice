@@ -1,0 +1,50 @@
+<div class="alert alert-light border d-flex align-items-center" *ngIf="addedProduct">
+	<strong class="text-success">{{addedProduct}}</strong> &nbsp; is selected and added in cart
+	<button class="btn btn-success ml-auto">Checkout</button>
+</div>
+<div class="page-area">
+	<div class="col-md-12 float-left">
+		<div class="card col-md-3 float-left mr-3" style="width: 18rem;">
+			<img src="..." class="card-img-top" alt="...">
+			<div class="card-body">
+				<h5 class="card-title">Mobile</h5>
+				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+					card's
+					content.</p>
+				<button class="btn btn-primary" (click)="onSelectProduct('Mobile')">select Product</button>
+			</div>
+		</div>
+		<div class="card col-md-3 float-left  mr-3" style="width: 18rem;">
+			<img src="..." class="card-img-top" alt="...">
+			<div class="card-body">
+				<h5 class="card-title">Laptop</h5>
+				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+					card's
+					content.</p>
+				<button class="btn btn-primary" (click)="onSelectProduct('laptop')">select Product</button>
+			</div>
+		</div>
+		<div class="card col-md-3 float-left  mr-3" style="width: 18rem;">
+			<img src="..." class="card-img-top" alt="...">
+			<div class="card-body">
+				<h5 class="card-title">Television</h5>
+				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+					card's
+					content.</p>
+				<button class="btn btn-primary" (click)="onSelectProduct('Television')">select Product</button>
+			</div>
+		</div>
+		<div class="card col-md-3 float-left  mr-3" style="width: 18rem;">
+			<img src="..." class="card-img-top" alt="...">
+			<div class="card-body">
+				<h5 class="card-title">Washingmachine</h5>
+				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+					content.</p>
+				<button class="btn btn-primary" (click)="onSelectProduct('Washingmachine')">select Product</button>
+			</div>
+		</div>
+	</div>
+	<app-child [productSelected]="proSelected" [selectedprod]="selprod" (addedProduct)="onAddProduct($event)">
+	</app-child>
+
+</div>

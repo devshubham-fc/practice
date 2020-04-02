@@ -1,0 +1,83 @@
+
+    <div class="card-header bg-primary">
+        <h3 class="card-title">{{myemploye.name}}</h3>
+    </div>
+    <div class="card-body">
+        <div class="col-xl-10">
+            <div class="row d-flex align-items-center">
+                <div class="col-xl-4">
+                    <img [src]="myemploye.Photopath">
+                </div>
+                <div class="col-xl-8">
+                    <div class="row">
+                        <div class="col-xl-6">
+                            Gender
+                        </div>
+                        <div class="col-xl-6">
+                            :-{{myemploye.gender}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6">
+                            email
+                        </div>
+                        <div class="col-xl-6">
+                            :-{{myemploye.email}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6">
+                            phonenumber
+                        </div>
+                        <div class="col-xl-6">
+                            :-{{myemploye.phonenumber}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6">
+                            contactPreference
+                        </div>
+                        <div class="col-xl-6">
+                            :-{{myemploye.contactPreference}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6">
+                            dateOfBirth
+                        </div>
+                        <div class="col-xl-6">
+                            :-{{myemploye.dateOfBirth | date}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6">
+                            department
+                        </div>
+                        <div class="col-xl-6" [ngSwitch]="myemploye.department">
+                            :- <span *ngSwitchCase="1">Help Desk</span>
+                               <span *ngSwitchCase="2">HR</span>
+                               <span *ngSwitchCase="3">IT</span>
+                               <span *ngSwitchCase="4">Payroll</span>
+                               <span *ngSwitchDefault>N/A</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6">
+                            inActive
+                        </div>
+                        <div class="col-xl-6">
+                            :-{{myemploye.isActive}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6">
+                            photopath
+                        </div>
+                        <div class="col-xl-6">
+                            :-{{myemploye.Photopath}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

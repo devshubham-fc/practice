@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="col-md8">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>product Image</th>
+                    <th>product Name</th>
+                    <th>product Id</th>
+                    <th>product Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor ="let mypro of products">
+                    <td>{{mypro.name}}</td>
+                    <td>{{mypro.name}}</td>
+                    <td>{{mypro.id}}</td>
+                    <td>{{mypro.price}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  <br><br>
+  <div>
+     <h2>Switch Loop</h2>
+     <select class="form-control" (change) ="getProductval($event)">
+         <option value="default">Select Product</option>
+         <option value="Laptop">Laptop</option>
+         <option value="Mobile">Mobile</option>
+         <option value="T.V">T.V</option>
+     </select>
+     <div [ngSwitch] ="selectedProduct">
+         <h2 *ngSwitchDefault>Please Select product</h2>
+         <h2 *ngSwitchCase = "'Laptop'">Laptop</h2>
+         <h2 *ngSwitchCase = "'Mobile'">Mobile</h2>
+         <h2 *ngSwitchCase = "'T.V'">T.V</h2>
+     </div>
+  </div>
+</div>
